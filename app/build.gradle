@@ -6,6 +6,10 @@ android {
     namespace 'com.kuldeep.abtestingsdk'
     compileSdk 34
 
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+
     defaultConfig {
         applicationId "com.kuldeep.abtestingsdk"
         minSdk 28
@@ -37,4 +41,7 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+//    implementation 'com.android.tools.build:gradle:8.5.0'
+
 }
